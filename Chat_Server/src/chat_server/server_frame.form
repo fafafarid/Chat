@@ -33,7 +33,7 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="b_end" max="32767" attributes="0"/>
-                          <Component id="b_start" pref="75" max="32767" attributes="0"/>
+                          <Component id="b_start" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="291" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -43,11 +43,6 @@
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="lb_name" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="209" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,8 +61,7 @@
                   <Component id="b_clear" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="b_end" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-              <Component id="lb_name" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -119,16 +113,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_clearActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lb_name">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="TechWorld3g"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
-          </Border>
-        </Property>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

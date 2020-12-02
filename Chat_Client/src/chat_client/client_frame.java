@@ -147,7 +147,6 @@ public class client_frame extends javax.swing.JFrame
         ta_chat = new javax.swing.JTextArea();
         tf_chat = new javax.swing.JTextField();
         b_send = new javax.swing.JButton();
-        lb_name = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Chat - Client's frame");
@@ -214,9 +213,6 @@ public class client_frame extends javax.swing.JFrame
             }
         });
 
-        lb_name.setText("TechWorld3g");
-        lb_name.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -231,7 +227,7 @@ public class client_frame extends javax.swing.JFrame
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(lb_username, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                            .addComponent(lb_username, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                             .addComponent(lb_address, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -254,10 +250,6 @@ public class client_frame extends javax.swing.JFrame
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(b_anonymous, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lb_name)
-                .addGap(201, 201, 201))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,8 +276,7 @@ public class client_frame extends javax.swing.JFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tf_chat)
                     .addComponent(b_send, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lb_name))
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -384,6 +375,7 @@ public class client_frame extends javax.swing.JFrame
         } else {
             try {
                writer.println(username + ":" + tf_chat.getText() + ":" + "Chat");
+               writer.println(new Date());
                writer.flush(); // flushes the buffer
             } catch (Exception ex) {
                 ta_chat.append("Message was not sent. \n");
@@ -415,7 +407,6 @@ public class client_frame extends javax.swing.JFrame
     private javax.swing.JButton b_send;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lb_address;
-    private javax.swing.JLabel lb_name;
     private javax.swing.JLabel lb_password;
     private javax.swing.JLabel lb_port;
     private javax.swing.JLabel lb_username;
